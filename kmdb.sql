@@ -106,6 +106,8 @@
 -- The Dark Knight Rises  Joseph Gordon-Levitt  John Blake
 -- The Dark Knight Rises  Anne Hathaway         Selina Kyle
 
+
+
 -- Turns column mode on but headers off
 .mode column
 .headers off
@@ -113,15 +115,41 @@
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
 
+drop table if EXISTS movies;
+drop table if EXISTS roles;
+drop table if EXISTS actor;
+
+
 -- Create new tables, according to your domain model
 -- TODO!
+
+CREATE TABLE movies (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT,
+  year_released INTEGER,
+  MPAA_rating TEXT,
+  studio TEXT);
+
+  create table actor (
+    id INTEGER PRIMARY key AUTOINCREMENT,
+    actor_name TEXT);
+
+
+create table roles (
+  id INTEGER PRIMARY key AUTOINCREMENT,
+  role_name TEXT,
+  movie_id INTEGER,
+  actor_id INTEGER);
+
 
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
 
+
+
 -- Prints a header for the movies output
-.print "Movies"
+.print "movies"
 .print "======"
 .print ""
 
@@ -129,7 +157,7 @@
 -- TODO!
 
 -- Prints a header for the cast output
-.print ""
+.print "roles"
 .print "Top Cast"
 .print "========"
 .print ""
