@@ -185,6 +185,10 @@ values ( "Christian Bale");
 
 insert into actor (
 actor_name)
+values ( "Michael Caine");
+
+insert into actor (
+actor_name)
 values ( "Liam Neeson");
 
 insert into actor (
@@ -220,39 +224,73 @@ actor_name)
 values ( "Anne Hathaway");
 
 
-insert into roles (
-  role_name)
-  values ("Batman");
 
   insert into roles (
   role_name,
   movie_id,
   actor_id)
-  values ("Batman",1,1);
+  values ("Bruce Wayne",1,1);
 
-  insert into roles (
-  role_name,
-  movie_id,
-  actor_id)
-  values ("Batman",2,1);
-
-  insert into roles (
-  role_name,
-  movie_id,
-  actor_id)
-  values ("Batman",3,1);
-
-  insert into roles (
+   insert into roles (
   role_name,
   movie_id,
   actor_id)
   values ("Alfred",1,2);
 
+    insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Ra's Al Ghul",1,3);
+
+    insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Rachel Dawes",1,4);
+
+    insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Commissioner Gordon",1,5);
+
   insert into roles (
   role_name,
   movie_id,
   actor_id)
+  values ("Bruce Wayne",2,1);
+
+   insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Joker",2,6);
+
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Harvey Dent",2,7);
+
+   insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
   values ("Alfred",2,2);
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Rachel Dawes",2,8);
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Bruce Wayne",3,1);
 
   insert into roles (
   role_name,
@@ -264,88 +302,28 @@ insert into roles (
   role_name,
   movie_id,
   actor_id)
-  values ("Liam Neeson",1,3);
-
-  insert into roles (
-  role_name,
-  movie_id,
-  actor_id)
-  values ("Rachel Dawes",1,3);
-
-  insert into roles (
-  role_name,
-  movie_id,
-  actor_id)
-  values ("Commissioner Gordon",1,4)
-
- insert into roles (
-  role_name,
-  movie_id,
-  actor_id)
-  values ("Commissioner Gordon",2,4)
-
-  insert into roles (
-  role_name,
-  movie_id,
-  actor_id)
-  values ("Commissioner Gordon",3,4)
-
-  insert into roles (
-  role_name,
-  movie_id,
-  actor_id)
-  values ("Joker",2,5)
-
-
-  insert into roles (
-  role_name,
-  movie_id,
-  actor_id)
-  values ("Harvey Dent",2,6)
-
-  insert into roles (
-  role_name,
-  movie_id,
-  actor_id)
-  values ("Rachel Dawes",2,7)
+  values ("Commissioner Gordon",3,5);
 
    insert into roles (
   role_name,
   movie_id,
   actor_id)
-  values ("Bane",3,8)
+  values ("Bane",3,9);
 
   insert into roles (
   role_name,
   movie_id,
   actor_id)
-  values ("John Blake",3,9)
+  values ("John Blake",3,10);
 
   insert into roles (
   role_name,
   movie_id,
   actor_id)
-  values ("Selina Kyle",3,9)
+  values ("Selina Kyle",3,11);
 
 
-  2--- "Michael Caine",
- 3--- "Liam Neeson",
-  4--- "Katie Holmes",
-  5--- "Gary Oldman",
- 6--- "Aaron Eckhart",
- 7--- "Maggie Gyllenhaal",
- 8--- "Tom Hardy",
- 9--- "Joseph Gordon-Levitt",
- 10--- "Anne Hathaway"
 
--- Batman Begins          Christian Bale        Bruce Wayne
--- Batman Begins          Michael Caine         Alfred
--- Batman Begins          Liam Neeson           Ra's Al Ghul
--- Batman Begins          Katie Holmes          Rachel Dawes
--- Batman Begins          Gary Oldman           Commissioner Gordon
--- The Dark Knight        Christian Bale        Bruce Wayne
--- The Dark Knight        Heath Ledger          Joker
--- The Dark Knight        Aaron Eckhart         Harvey Dent
 -- The Dark Knight        Michael Caine         Alfred
 -- The Dark Knight        Maggie Gyllenhaal     Rachel Dawes
 -- The Dark Knight Rises  Christian Bale        Bruce Wayne
@@ -356,15 +334,19 @@ insert into roles (
 
 
 -- Prints a header for the movies output
-.print "movies"
+.print "Movies"
 .print "======"
 .print ""
 
 -- The SQL statement for the movies output
 -- TODO!
 
+SELECT title, year_released, MPAA_rating, studio
+from movies;
+
+
+
 -- Prints a header for the cast output
-.print "roles"
 .print "Top Cast"
 .print "========"
 .print ""
@@ -372,3 +354,9 @@ insert into roles (
 
 -- The SQL statement for the cast output
 -- TODO!
+
+
+SELECT title, actor_name, role_name
+from movies
+inner join roles on movies.id = roles.movie_id
+inner join actor on roles.actor_id = actor.id;
