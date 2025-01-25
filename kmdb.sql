@@ -197,6 +197,10 @@ values ( "Gary Oldman");
 
 insert into actor (
 actor_name)
+values ( "Heath Ledger");
+
+insert into actor (
+actor_name)
 values ( "Aaron Eckhard");
 
 insert into actor (
@@ -216,15 +220,123 @@ actor_name)
 values ( "Anne Hathaway");
 
 
-  --- "Michael Caine",
- --- "Liam Neeson",
-  --- "Katie Holmes",
-  --- "Gary Oldman",
- --- "Aaron Eckhart",
- --- "Maggie Gyllenhaal",
- --- "Tom Hardy",
- --- "Joseph Gordon-Levitt",
- --- "Anne Hathaway"
+insert into roles (
+  role_name)
+  values ("Batman");
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Batman",1,1);
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Batman",2,1);
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Batman",3,1);
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Alfred",1,2);
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Alfred",2,2);
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Alfred",3,2);
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Liam Neeson",1,3);
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Rachel Dawes",1,3);
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Commissioner Gordon",1,4)
+
+ insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Commissioner Gordon",2,4)
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Commissioner Gordon",3,4)
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Joker",2,5)
+
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Harvey Dent",2,6)
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Rachel Dawes",2,7)
+
+   insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Bane",3,8)
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("John Blake",3,9)
+
+  insert into roles (
+  role_name,
+  movie_id,
+  actor_id)
+  values ("Selina Kyle",3,9)
+
+
+  2--- "Michael Caine",
+ 3--- "Liam Neeson",
+  4--- "Katie Holmes",
+  5--- "Gary Oldman",
+ 6--- "Aaron Eckhart",
+ 7--- "Maggie Gyllenhaal",
+ 8--- "Tom Hardy",
+ 9--- "Joseph Gordon-Levitt",
+ 10--- "Anne Hathaway"
 
 -- Batman Begins          Christian Bale        Bruce Wayne
 -- Batman Begins          Michael Caine         Alfred
