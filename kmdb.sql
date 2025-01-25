@@ -146,6 +146,101 @@ create table roles (
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
 
+Insert into movies (
+  title,
+  year_released,
+  MPAA_rating,
+  studio)
+values (
+"Batman Begins",
+"2005",
+"PG-13",
+"Warner Bros.");
+
+Insert into movies (
+  title,
+  year_released,
+  MPAA_rating,
+  studio)
+values (
+"The Dark Knight",
+"2008",
+"PG-13",
+"Warner Bros.");
+
+Insert into movies (
+  title,
+  year_released,
+  MPAA_rating,
+  studio)
+values (
+"The Dark Knight Rises",
+"2012",
+"PG-13",
+"Warner Bros.");
+
+insert into actor (
+actor_name)
+values ( "Christian Bale");
+
+insert into actor (
+actor_name)
+values ( "Liam Neeson");
+
+insert into actor (
+actor_name)
+values ( "Katie Holmes");
+
+insert into actor (
+actor_name)
+values ( "Gary Oldman");
+
+insert into actor (
+actor_name)
+values ( "Aaron Eckhard");
+
+insert into actor (
+actor_name)
+values ( "Maggie Gyllenhaal");
+
+insert into actor (
+actor_name)
+values ( "Tom Hardy");
+
+insert into actor (
+actor_name)
+values ( "Joseph Gordon-Levitt");
+
+insert into actor (
+actor_name)
+values ( "Anne Hathaway");
+
+
+  --- "Michael Caine",
+ --- "Liam Neeson",
+  --- "Katie Holmes",
+  --- "Gary Oldman",
+ --- "Aaron Eckhart",
+ --- "Maggie Gyllenhaal",
+ --- "Tom Hardy",
+ --- "Joseph Gordon-Levitt",
+ --- "Anne Hathaway"
+
+-- Batman Begins          Christian Bale        Bruce Wayne
+-- Batman Begins          Michael Caine         Alfred
+-- Batman Begins          Liam Neeson           Ra's Al Ghul
+-- Batman Begins          Katie Holmes          Rachel Dawes
+-- Batman Begins          Gary Oldman           Commissioner Gordon
+-- The Dark Knight        Christian Bale        Bruce Wayne
+-- The Dark Knight        Heath Ledger          Joker
+-- The Dark Knight        Aaron Eckhart         Harvey Dent
+-- The Dark Knight        Michael Caine         Alfred
+-- The Dark Knight        Maggie Gyllenhaal     Rachel Dawes
+-- The Dark Knight Rises  Christian Bale        Bruce Wayne
+-- The Dark Knight Rises  Gary Oldman           Commissioner Gordon
+-- The Dark Knight Rises  Tom Hardy             Bane
+-- The Dark Knight Rises  Joseph Gordon-Levitt  John Blake
+-- The Dark Knight Rises  Anne Hathaway         Selina Kyle
 
 
 -- Prints a header for the movies output
