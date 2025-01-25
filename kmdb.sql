@@ -347,6 +347,7 @@ from movies;
 
 
 -- Prints a header for the cast output
+.print ""
 .print "Top Cast"
 .print "========"
 .print ""
